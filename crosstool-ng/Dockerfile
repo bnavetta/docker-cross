@@ -10,7 +10,7 @@ ENV CROSSTOOL_NG_DOWNLOAD_SHA1 b11f7ee706753b8cf822f98b549f8ab9dd8da9c7
 
 # These are needed to build crosstool-ng, but most are also needed for it to build toolchains
 RUN apt-get update \
-	&& apt-get install -y gcc g++ libc6-dev make bzip2 gperf bison flex texinfo wget patch gawk libtool libtool-bin libncurses5-dev automake --no-install-recommends
+	&& apt-get install -y build-essential git bzip2 gperf bison flex texinfo wget patch gawk libtool libtool-bin libncurses5-dev automake zlib1g-dev --no-install-recommends
 
 RUN set -x \
 	&& mkdir -p /usr/src/crosstool-ng \
